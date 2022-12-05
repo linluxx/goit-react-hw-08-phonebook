@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { FaUserFriends, FaPhoneAlt } from 'react-icons/fa';
 
-import { ContactForm } from '../ContactForm/ContactForm';
-import { Filter } from '../Filter/Filter';
-import { ContactList } from '../ContactList/ContactList';
-import { selectError, selectIsLoading } from 'redux/selectors';
-import { fetchContacts } from 'redux/operations';
+import { ContactForm } from '../../components/ContactForm/ContactForm';
+import { Filter } from '../../components/Filter/Filter';
+import { ContactList } from '../../components/ContactList/ContactList';
+import { selectError, selectIsLoading } from 'redux/contacts/selectors';
+import { fetchContacts } from 'redux/contacts/operations';
 
-import { Container, Title, ContactsTitle } from './App.styled';
+import { Container, Title, ContactsTitle } from './Contacts.styled';
 
-export const App = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -37,3 +37,5 @@ export const App = () => {
     </Container>
   );
 };
+
+export default Contacts;
