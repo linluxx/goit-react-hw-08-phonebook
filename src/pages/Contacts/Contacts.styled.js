@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+  margin-right: auto;
+  margin-left: auto;
   padding: 20px;
-  max-width: 700px;
+  max-width: 1000px;
 `;
 
 const Title = styled.h1`
