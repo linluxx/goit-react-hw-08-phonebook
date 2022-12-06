@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 `;
 export const Username = styled.p`
   font-weight: 700;
+  color: ${p => p.theme.colors.light};
 `;
 
 export const LogOutBtn = styled.button`
@@ -15,4 +16,9 @@ export const LogOutBtn = styled.button`
   border-color: transparent;
   color: ${p => p.theme.colors.light};
   padding: 0;
+  transition: all 250ms linear;
+  &:hover,
+  &:focus {
+    color: ${p => p.theme.colors.accent};
+  }
 `;

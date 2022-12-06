@@ -1,45 +1,5 @@
-// import { useDispatch } from 'react-redux';
-
-import { register } from 'redux/auth/operations';
-
-// export const RegisterForm = () => {
-//   const dispatch = useDispatch();
-
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     const form = e.currentTarget;
-//     dispatch(
-//       register({
-//         name: form.elements.name.value,
-//         email: form.elements.email.value,
-//         password: form.elements.password.value,
-//       })
-//     );
-//     form.reset();
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         Username
-//         <input type="text" name="name" />
-//       </label>
-//       <label>
-//         Email
-//         <input type="email" name="email" />
-//       </label>
-//       <label>
-//         Password
-//         <input type="password" name="password" />
-//       </label>
-//       <button type="submit">Register</button>
-//     </form>
-//   );
-// };
-
 import { useDispatch } from 'react-redux';
 
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -50,6 +10,8 @@ import Grid from '@mui/material/Grid';
 import PersonAddAlt1OutlinedIcon from '@mui/icons-material/PersonAddAlt1Outlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+import { register } from 'redux/auth/operations';
 
 const theme = createTheme({
   palette: {
@@ -120,7 +82,7 @@ export function RegisterForm() {
               component="form"
               noValidate
               onSubmit={handleSubmit}
-              sx={{ mt: 1, width: 500 }}
+              sx={{ mt: 1, maxWidth: 500 }}
             >
               <TextField
                 margin="normal"
